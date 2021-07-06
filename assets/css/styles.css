@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+}
+
+@font-face{
+    font-family: "main";
+    src: url("../font/NotoSans-Regular.ttf");
+}
+
+@font-face{
+    font-family: "intro";
+    src: url("../font/YuseiMagic-Regular.ttf");
+}
+
+@font-face{
+    font-family: "text";
+    src: url("../font/Raleway-Light.ttf");
+}
+
+body{
+    margin: 10px;
+    background-color: #39375b;
+}
+
+#navBar{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 10 0 10;
+    border: 1px solid #39375b;
+}
+
+#navBar, #navBar>a{
+    color: #39375b;
+    background-color: azure;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-family: "text";
+}
+
+#top{
+    text-align: center;
+    margin: 0px 10px 0px 10px;
+    position: relative;
+    z-index: 1;
+    padding-top: 50px;
+    height: auto;
+}
+
+#computer-svg{
+    filter: invert(100%);
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 50%;
+    min-width: 10px;
+    max-width: 200px;
+}
+
+#name{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "main";
+    color: aliceblue;
+    min-width: 30%;
+    max-width: 500px;
+}
+
+#intro{
+    font-family: "intro";
+    font-size: 1.5em;
+}
+
+#middle, #bottom{
+    background-color: azure;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: "text";
+    color: #696969;
+    min-width: 30%;
+    max-width: 500px;
+    border-radius: 25px;
+    padding: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+#middle>p{
+    margin:15px;
+}
+
+hr{
+    margin: 30px;
+    max-width: 450px;
+    min-width: 30%;
+}
+
+.logo{
+    min-width: 30%;
+    max-width: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    filter: saturate(0%) grayscale(100%) contrast(30%);
+    transition: 0.4s;
+}
+
+.logo:hover{
+    filter: saturate(100%) grayscale(0%) contrast(50%);
+}
+
+.stars{
+    color: darkorange;
+    font-size: 1.5em;
+}
+
+#resume{
+    margin-top: -25px;
+}
+
+#downloadButtons{
+    display: flex;
+    position: relative;
+    z-index: 2;
+    padding-left: 20%;
+    padding-right: 20%;
+    flex-direction: row;
+}
+
+#downloadDiv{
+    min-width: 30%;
+    height: max-content;
+    padding: 10px;
+}
+
+#download{
+    font-size: 15px;
+    background-color: #101231;
+    color: azure;
+    padding: 10px 10px 10px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "text";
+    margin-bottom: 10px;
+}
+
+.downloadHint{
+    visibility: hidden;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.Dark{
+    background-color: #101231;
+    color: azure;
+}
+
+.Light{
+    background-color: azure;
+    border: thin solid #101231;
+    color: #101231;
+}
+
+#downloadDiv:hover>span.Dark,#downloadDiv:hover> span.Light{
+    visibility: visible;
+}
+
+a{
+    color: transparent;
+}
