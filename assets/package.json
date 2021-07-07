@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "watch": "chokidar scss/* --command 'node-sass-chokidar scss/styles.scss --quiet | postcss --use autoprefixer --no-map > css/style.css'",
-    "build": "node-sass-chokidar scss/styles.scss --quiet | postcss --use autoprefixer --no-map > css/style.css"
+    "watch": "chokidar scss/* --command 'node-sass-chokidar scss/styles.scss --quiet | postcss --use autoprefixer --no-map > css/styles.css'",
+    "build": "node-sass-chokidar scss/styles.scss --quiet | postcss --use autoprefixer --no-map > css/styles.css"
   },
   "devDependencies": {
     "autoprefixer": "latest",
