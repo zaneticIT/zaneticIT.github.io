@@ -4,136 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="assets/scss/styles.css">
 
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.ico">
     <title>Petar Zanetic Portfolio</title>
 </head>
 
-<body>
+<body class="">
     <div id="navBar">
-            <a href="#top">Intro</a>
-            <a href="#javascript">JavaScript</a>
-            <a href="#java">Java</a>
-            <a href="#php">PHP</a>
-            <a href="#react">React</a>
-            <a href="#html5-css3">HTML5-CSS3</a>
-            <a href="#resumes">Resume</a>
+        <a href="#top">Intro</a>
+        <a href="#javascript">JavaScript</a>
+        <a href="#java">Java</a>
+        <a href="#php">PHP</a>
+        <a href="#react">React</a>
+        <a href="#html5-css3">HTML5-CSS3</a>
+        <a href="#resumes">Resume</a>
     </div>
-    <div id="top">
-        <img id="computer-svg" src="assets/images/comp-svg.svg" alt="computer">
-        <div id="name">
+    <div id="NightMode">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+    <div id="content">
+        <div id="top">
+            <img id="computer-svg" src="assets/images/comp-svg.svg" alt="computer">
+            <div id="name">
+                <h1>
+                    Petar Žanetić
+                </h1>
+                <p id="intro">
+                    Hello World!
+                </p>
+                <p id="intro">
+                    I'm a programming student from Zagreb, Croatia.
+                    I made this webpage from scratch as I needed it (not mobile optimized right now).
+                    If you are seeing this, either I was interested in working for You, or You are interested in
+                    employing
+                    me.
+                    So let's make it happen!
+                </p>
+            </div>
+        </div>
+        <div id="middle">
+            <h2>
+                Hello world!
+            </h2>
+            <p>
+                Placeholder Skills
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus illum odit totam distinctio
+                quibusdam
+                officiis corrupti maxime veniam, facere reprehenderit soluta beatae porro, laudantium neque pariatur
+                mollitia dicta expedita aspernatur?
+            </p>
+            <hr id="javascript">
+            <img id="js-img" class="logo" src="assets/images/javascript.svg" alt="JavaScript image">
+            <div id="js-stars" class="stars">
+            </div>
+            <p id="js">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
+                atque
+                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
+                Mollitia.
+            </p>
+            <hr id="java">
+            <img id="java-img" class="logo" src="assets/images/java.svg" alt="Java image">
+            <div id="java-stars" class="stars">
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
+                atque
+                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
+                Mollitia.
+            </p>
+            <hr id="php">
+            <img id="php-img" class="logo" src="assets/images/php.svg" alt="JavaScript image">
+            <div id="php-stars" class="stars">
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
+                atque
+                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
+                Mollitia.
+            </p>
+            <hr id="react">
+            <img id="react-img" class="logo" src="assets/images/react.svg" alt="JavaScript image">
+            <div id="react-stars" class="stars">
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
+                atque
+                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
+                Mollitia.
+            </p>
+            <hr id="html5-css3">
+            <img id="html5-css3-img" class="logo" src="assets/images/html5css3.svg" alt="JavaScript image">
+            <div id="html5css3-stars" class="stars">
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
+                atque
+                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
+                Mollitia.
+            </p>
+            <hr id="resumes">
+            <div id="downloadButtons">
+                <a href="assets/misc/Petar_Zanetic_Resume.pdf" download="Petar_Zanetic_Resume.pdf">
+                    <div id="downloadDiv">
+                        <button id=download>Resume</button>
+                        <span class="downloadHint Dark">Dark color</span>
+                    </div>
+
+                </a>
+                <a href="assets/misc/Petar_Zanetic_Resume_Light.pdf" download="Petar_Zanetic_Resume.pdf">
+                    <div id="downloadDiv">
+                        <button id=download>Printer-friendly resume</button>
+                        <span class="downloadHint Light">Light color</span>
+                    </div>
+                </a>
+            </div>
+            <p id="resume">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
+                atque
+                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
+                Mollitia.
+            </p>
+        </div>
+        <div id=bottom>
             <h1>
-                Petar Žanetić
+                Placeholder Contact
             </h1>
-            <p id="intro">
-                Hello World!
-            </p>
-            <p id="intro">
-                I'm a programming student from Zagreb, Croatia.
-                I made this webpage from scratch as I needed it (not mobile optimized right now).
-                If you are seeing this, either I was interested in working for You, or You are interested in employing
-                me.
-                So let's make it happen!
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt illo dolorem quasi repudiandae officia
+                assumenda ut doloribus ullam vel laudantium, tempore explicabo ducimus illum fuga provident iure quod
+                dolor
+                dolore!
             </p>
         </div>
     </div>
-    <div id="middle">
-        <h2>
-            Hello world!
-        </h2>
-        <p>
-            Placeholder Skills
-        </p>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus illum odit totam distinctio quibusdam
-            officiis corrupti maxime veniam, facere reprehenderit soluta beatae porro, laudantium neque pariatur
-            mollitia dicta expedita aspernatur?
-        </p>
-        <hr id="javascript">
-        <img id="js-img" class="logo" src="assets/images/javascript.svg" alt="JavaScript image">
-        <div id="js-stars" class="stars">
-        </div>
-        <p id="js">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut atque
-            beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-            Mollitia.
-        </p>
-        <hr id="java">
-        <img id="java-img" class="logo" src="assets/images/java.svg" alt="Java image">
-        <div id="java-stars" class="stars">
-        </div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut atque
-            beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-            Mollitia.
-        </p>
-        <hr id="php">
-        <img id="php-img" class="logo" src="assets/images/php.svg" alt="JavaScript image">
-        <div id="php-stars" class="stars">
-        </div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut atque
-            beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-            Mollitia.
-        </p>
-        <hr id="react">
-        <img id="react-img" class="logo" src="assets/images/react.svg" alt="JavaScript image">
-        <div id="react-stars" class="stars">
-        </div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut atque
-            beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-            Mollitia.
-        </p>
-        <hr id="html5-css3">
-        <img id="html5-css3-img" class="logo" src="assets/images/html5css3.svg" alt="JavaScript image">
-        <div id="html5css3-stars" class="stars">
-        </div>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut atque
-            beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-            Mollitia.
-        </p>
-        <hr id="resumes">
-        <div id="downloadButtons">
-            <a href="assets/misc/Petar_Zanetic_Resume.pdf" download="Petar_Zanetic_Resume.pdf">
-                <div id="downloadDiv">
-                    <button id=download>Resume</button>
-                    <span class="downloadHint Dark">Dark color</span>
-                </div>
 
-            </a>
-            <a href="assets/misc/Petar_Zanetic_Resume_Light.pdf" download="Petar_Zanetic_Resume.pdf">
-                <div id="downloadDiv">
-                    <button id=download>Printer-friendly resume</button>
-                    <span class="downloadHint Light">Light color</span>
-                </div>
-            </a>
-        </div>
-        <p id="resume">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
-            atque
-            beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-            Mollitia.
-        </p>
-    </div>
-    <div id=bottom>
-        <h1>
-            Placeholder Contact
-        </h1>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt illo dolorem quasi repudiandae officia
-            assumenda ut doloribus ullam vel laudantium, tempore explicabo ducimus illum fuga provident iure quod dolor
-            dolore!
-        </p>
-    </div>
-
+   <script src="assets/js/react/jsx.min.js"></script>
+    <script src="assets/js/react/react.min.js"></script>
+    <script src="assets/js/react/react-dom.min.js"></script>
+    <script src="assets/js/script.js" type="text/babel"></script>
 </body>
-<script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
-<script src="assets/js/react/jsx.min.js"></script>
-<script src="assets/js/react/react.min.js"></script>
-<script src="assets/js/react/react-dom.min.js"></script>
-<script src="assets/js/script.js" type="text/babel"></script>
-
 </html>

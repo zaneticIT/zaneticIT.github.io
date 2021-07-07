@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "watch": "chokidar scss/* --command 'node-sass-chokidar scss/styles.scss --quiet | postcss --use autoprefixer --no-map > css/style.css'",
+    "build": "node-sass-chokidar scss/styles.scss --quiet | postcss --use autoprefixer --no-map > css/style.css"
+  },
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "chokidar-cli": "latest",
+    "node-sass-chokidar": "latest",
+    "postcss": "latest",
+    "postcss-cli": "latest"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 4 versions",
+    "not dead"
+  ]
+}

@@ -1,6 +1,24 @@
 let full_star = "★"
 let empty_star = "☆"
 let renderStars = "123";
+let theme = true;
+
+let buttonElement = document.querySelector(".switch input");
+buttonElement.addEventListener("click", switchTheme);
+
+function switchTheme() {
+    let x = document.getElementsByTagName("BODY")[0];
+    let nightString = "Night"
+    if (theme) {
+        x.className = nightString;
+        
+    }
+    else {
+        x.className = "";
+    }
+    theme = !theme;
+    console.log(theme)
+}
 
 class Stars extends React.Component {
     render() {
