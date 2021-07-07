@@ -17,7 +17,6 @@ function switchTheme() {
         x.className = "";
     }
     theme = !theme;
-    console.log(theme)
 }
 
 class Stars extends React.Component {
