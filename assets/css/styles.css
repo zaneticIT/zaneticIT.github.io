@@ -1,5 +1,6 @@
 * {
-  margin: 0; }
+  margin: 0;
+  scroll-behavior: smooth; }
 
 @font-face {
   font-family: "main";
@@ -15,7 +16,32 @@
 
 body {
   margin: 10px;
-  background-color: #39375b; }
+  background-color: #39375b;
+  scroll-behavior: smooth; }
+
+#hamburger {
+  cursor: pointer;
+  display: none; }
+
+.bar {
+  width: 35px;
+  height: 5px;
+  background-color: azure;
+  margin: 6px 0;
+  transition: all 0.4s linear;
+  border-radius: 3px; }
+
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px); }
+
+.change .bar2 {
+  opacity: 0; }
+
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px); }
+
+.controls {
+  margin: 0; }
 
 #navBar {
   position: fixed;
@@ -25,17 +51,130 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 10 0 10;
-  border: 1px solid #39375b; }
-
-#navBar {
-  border-radius: 5px;
-  background-color: azure; }
+  border: 1px solid #39375b;
+  white-space: nowrap;
+  background-color: azure;
+  width: auto;
+  max-width: 500px;
+  justify-content: center;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  overflow: hidden; }
   #navBar a {
     color: #39375b;
     text-decoration: none;
-    padding: 5px;
+    padding: 7px 5px;
     font-family: "text"; }
+  #navBar a:hover {
+    background-color: #39375b;
+    color: azure; }
+
+@media only screen and (max-width: 893px) {
+  #controls {
+    background-color: #39375b;
+    position: fixed;
+    padding: 5px;
+    z-index: 3;
+    width: 100%; }
+    #controls #hamburger {
+      display: block;
+      margin: 1px; }
+    #controls #navBar {
+      flex-direction: column;
+      padding: 0px 10px 0px 10px;
+      position: fixed;
+      display: flex;
+      max-height: 0;
+      max-width: 500px;
+      overflow: hidden;
+      border-radius: 25px;
+      border: unset;
+      transition: max-height 1s linear;
+      top: 75px;
+      width: calc(100% - 39px);
+      align-items: center;
+      box-sizing: border-box; }
+      #controls #navBar.show {
+        max-height: 300px;
+        border: 1px solid #39375b;
+        border-radius: 25px; }
+      #controls #navBar a {
+        white-space: nowrap;
+        transition: opacity 0.5s linear;
+        transition-delay: 0.5s; } }
+
+/* from : https://www.w3schools.com/howto/howto_css_switch.asp */
+/* The switch - the box around the slider */
+.switch {
+  margin-top: 7px;
+  position: fixed;
+  right: 10px;
+  float: right;
+  width: 60px;
+  height: 34px;
+  z-index: 3;
+  /* Hide default HTML checkbox */ }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: azure;
+  transition: 0.4s; }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #39375b;
+    transition: 0.4s; }
+  .slider.round {
+    border-radius: 34px; }
+    .slider.round:before {
+      border-radius: 50%; }
+
+input:checked + .slider {
+  background-color: azure; }
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: #1b1b1b; }
+
+.Night {
+  background-color: #1b1b1b; }
+  .Night #navBar,
+  .Night #middle,
+  .Night #bottom {
+    background-color: #4b4b4b;
+    color: #f0ffff; }
+    .Night #navBar a,
+    .Night #middle a,
+    .Night #bottom a {
+      color: #f0ffff; }
+  .Night #controls {
+    background-color: #1b1b1b; }
+  .Night #navBar a:hover {
+    background-color: #1b1b1b; }
+  .Night #download,
+  .Night .downloadHint {
+    background-color: #1b1b1b;
+    border-color: #1b1b1b; }
+    .Night #download.Light,
+    .Night .downloadHint.Light {
+      background-color: azure; }
+
+#content {
+  margin: 10px; }
 
 #top {
   text-align: center;
@@ -50,7 +189,6 @@ body {
   margin-right: auto;
   margin-left: auto;
   border-radius: 50%;
-  min-width: 10px;
   max-width: 200px; }
 
 #name {
@@ -76,7 +214,6 @@ body {
   text-align: center;
   font-family: "text";
   color: #696969;
-  min-width: 30%;
   max-width: 500px;
   border-radius: 25px;
   padding: 50px;
@@ -156,67 +293,3 @@ hr {
 
 a {
   color: transparent; }
-
-/* from : https://www.w3schools.com/howto/howto_css_switch.asp */
-/* The switch - the box around the slider */
-.switch {
-  position: relative;
-  float: right;
-  width: 60px;
-  height: 34px;
-  z-index: 1000;
-  /* Hide default HTML checkbox */ }
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0; }
-
-/* The slider */
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: azure;
-  transition: 0.4s; }
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: #39375b;
-    transition: 0.4s; }
-  .slider.round {
-    border-radius: 34px; }
-    .slider.round:before {
-      border-radius: 50%; }
-
-input:checked + .slider {
-  background-color: azure; }
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-  background-color: #1b1b1b; }
-
-.Night {
-  background-color: #1b1b1b; }
-  .Night #navBar,
-  .Night #middle,
-  .Night #bottom {
-    background-color: #4b4b4b;
-    color: #f0ffff; }
-    .Night #navBar a,
-    .Night #middle a,
-    .Night #bottom a {
-      color: #f0ffff; }
-  .Night #download,
-  .Night .downloadHint {
-    background-color: #1b1b1b;
-    border-color: #1b1b1b; }
-    .Night #download.Light,
-    .Night .downloadHint.Light {
-      background-color: azure; }

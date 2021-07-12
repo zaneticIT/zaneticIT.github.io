@@ -3,6 +3,26 @@ let empty_star = "☆"
 let renderStars = "123";
 let theme = true;
 
+function hamburger(x) {
+    x.classList.toggle("change");
+    let navBar = document.getElementById("navBar");
+    if (navBar.classList.contains("show")) {
+        navBar.classList.remove("show");
+    }
+    else{
+        navBar.classList.add("show");
+    }
+}
+
+let nav = document.getElementById("navBar");
+let navItems = nav.getElementsByTagName("a");
+console.log(navItems);
+for(let i = 0; i < navItems.length; i++){
+    navItems[i].addEventListener("click", function(){
+        hamburger(document.getElementById("hamburger"));
+    })
+}
+
 let buttonElement = document.querySelector(".switch input");
 buttonElement.addEventListener("click", switchTheme);
 
@@ -11,7 +31,7 @@ function switchTheme() {
     let nightString = "Night"
     if (theme) {
         x.className = nightString;
-        
+
     }
     else {
         x.className = "";
