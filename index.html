@@ -18,13 +18,14 @@
             <div class="bar3 bar"></div>
         </div>
         <div id="navBar">
+            <!--
             <a href="#top">Intro</a>
             <a href="#javascript">JavaScript</a>
             <a href="#java">Java</a>
             <a href="#php">PHP</a>
             <a href="#react">React</a>
             <a href="#html5-css3">HTML5-CSS3</a>
-            <a href="#resumes">Resume</a>
+            <a href="#resumes">Resume</a>-->
         </div>
 
     </div>
@@ -35,7 +36,7 @@
         </label>
     </div>
     <div id="content">
-        <div id="top">
+        <div id="top" class="autoNav" name="Intro">
             <img id="computer-svg" src="assets/images/comp-svg.svg" alt="computer">
             <div id="name">
                 <h1>
@@ -46,78 +47,71 @@
                 </p>
                 <p id="intro">
                     I'm a programming student from Zagreb, Croatia.
-                    I made this webpage from scratch as I needed it (not mobile optimized right now).
-                    If you are seeing this, either I was interested in working for You, or You are interested in
-                    employing
-                    me.
+                    I made this webpage from scratch as I needed it (mobile optimized now).
+                    <br>If you are seeing this, either I was interested in working for You, or You are interested in
+                    employing me.
                     So let's make it happen!
                 </p>
             </div>
         </div>
         <div id="middle">
-            <h2>
-                Hello world!
-            </h2>
+            <h3>
+                My Skills
+            </h3>
             <p>
-                Placeholder Skills
+                These are the programming languages I am skilled at, the stars are an out-of-five rating,
+                self-explanatory.
+                <br>I acquired them either in college or from online sources(freecodecamp.com, codecadamy, youtube)
+                and have been using them on a regular basis and feel comfortable using them.
+
             </p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus illum odit totam distinctio
-                quibusdam
-                officiis corrupti maxime veniam, facere reprehenderit soluta beatae porro, laudantium neque pariatur
-                mollitia dicta expedita aspernatur?
-            </p>
-            <hr id="javascript">
+            <hr id="javascript" class="autoNav" name="Javascript">
             <img id="js-img" class="logo" src="assets/images/javascript.svg" alt="JavaScript image">
             <div id="js-stars" class="stars">
             </div>
             <p id="js">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
-                atque
-                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-                Mollitia.
+            <h3>JavaScript</h3>
+            <br>
+            I've been familiar with JavaScript for a few years now, used it before college for fun. Mostly simple things
+            but definitely helped my college education.
             </p>
-            <hr id="java">
+            <hr id="java" class="autoNav" name="Java">
             <img id="java-img" class="logo" src="assets/images/java.svg" alt="Java image">
             <div id="java-stars" class="stars">
             </div>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
-                atque
-                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-                Mollitia.
+            <h3>Java</h3>
+            Java has been the foundation of my college education, focused primarily on logical operations with little
+            back-end programming. I can find my way with Java.
             </p>
-            <hr id="php">
+            <hr id="php" class="autoNav" name="PHP">
             <img id="php-img" class="logo" src="assets/images/php.svg" alt="JavaScript image">
             <div id="php-stars" class="stars">
             </div>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
-                atque
-                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-                Mollitia.
+            <h3>PHP</h3>
+            PHP has been my curse and my blessing. I like using it, but I don't like how you have to write it.
+            Can be confusing at times but nothing I can't handle.
             </p>
-            <hr id="react">
+            <hr id="react" class="autoNav" name="React">
             <img id="react-img" class="logo" src="assets/images/react.svg" alt="JavaScript image">
             <div id="react-stars" class="stars">
             </div>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
-                atque
-                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-                Mollitia.
+            <h3>React</h3>
+            After learning it for a few weeks now, I have familiarized myself with React. Not too comfortable to be
+            using it professionally, but that's why I'm putting it here.
             </p>
-            <hr id="html5-css3">
+            <hr id="html5-css3" class="autoNav" name="HTML5/CSS3">
             <img id="html5-css3-img" class="logo" src="assets/images/html5css3.svg" alt="JavaScript image">
             <div id="html5css3-stars" class="stars">
             </div>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni optio porro, eveniet nisi repellat aut
-                atque
-                beatae, consequatur necessitatibus, consequuntur esse? Libero ducimus fuga esse hic in, architecto iste!
-                Mollitia.
+            <h3>HTML5/CSS3</h3>
+            HTML5/CSS3 needs little introduction, other than being the backbone of every webpage. Can't make a webpage
+            without using them.
             </p>
-            <hr id="resumes">
+            <hr id="resumes" class="autoNav" name="Resume">
             <div id="downloadButtons">
                 <a href="assets/misc/Petar_Zanetic_Resume.pdf" download="Petar_Zanetic_Resume.pdf">
                     <div id="downloadDiv">
@@ -140,7 +134,7 @@
                 Mollitia.
             </p>
         </div>
-        <div id=bottom>
+        <div id="bottom" class="autoNav" name="Contact">
             <h1>
                 Placeholder Contact
             </h1>

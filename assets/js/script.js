@@ -9,18 +9,30 @@ function hamburger(x) {
     if (navBar.classList.contains("show")) {
         navBar.classList.remove("show");
     }
-    else{
+    else {
         navBar.classList.add("show");
     }
 }
 
-let nav = document.getElementById("navBar");
-let navItems = nav.getElementsByTagName("a");
-console.log(navItems);
-for(let i = 0; i < navItems.length; i++){
-    navItems[i].addEventListener("click", function(){
-        hamburger(document.getElementById("hamburger"));
-    })
+function autoNavBar() {
+    let autoNavItems = document.getElementsByClassName("autoNav");
+    let nav = document.getElementById("navBar");
+    for (let i = 0; i < autoNavItems.length; i++) {
+        let name = autoNavItems[i].getAttribute("name");
+        let id = autoNavItems[i].id;
+        nav.innerHTML += "<a href=\"#" + id + "\">" + name + "</a>";
+        console.log(name);
+        addListener();
+    }
+}
+function addListener() {
+    let nav = document.getElementById("navBar");
+    let navItems = nav.getElementsByTagName("a");
+    for (let i = 0; i < navItems.length; i++) {
+        navItems[i].addEventListener("click", function () {
+            hamburger(document.getElementById("hamburger"));
+        })
+    }
 }
 
 let buttonElement = document.querySelector(".switch input");
@@ -66,6 +78,8 @@ function fillStars(numOfStars, id) {
 
     ReactDOM.render(renderStars, document.getElementById(id))
 }
+
+autoNavBar();
 
 fillStars(4, "js-stars");
 fillStars(4, "java-stars");
